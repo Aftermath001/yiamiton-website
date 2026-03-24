@@ -2,36 +2,36 @@ import { useState, useEffect } from 'react'
 import './Page.css'
 
 const images = [
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (2).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (3).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (4).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (5).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (6).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47 (7).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.47.jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (1).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (2).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (3).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (4).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (5).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (6).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (7).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48 (8).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.48.jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.49 (1).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.49 (2).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.54.49.jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.59.14 (1).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.59.14 (2).jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.59.14.jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.59.30.jpeg',
-  '/src/assets/WhatsApp Image 2026-03-24 at 21.59.31.jpeg'
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (2).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (3).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (4).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (5).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (6).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47 (7).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.47.jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (1).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (2).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (3).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (4).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (5).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (6).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (7).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48 (8).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.48.jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.49 (1).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.49 (2).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.54.49.jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.59.14 (1).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.59.14 (2).jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.59.14.jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.59.30.jpeg',
+  '/assets/WhatsApp Image 2026-03-24 at 21.59.31.jpeg'
 ]
 
 const videos = [
-  '/src/assets/WhatsApp Video 2026-03-24 at 21.54.49.mp4',
-  '/src/assets/WhatsApp Video 2026-03-24 at 21.59.12.mp4',
-  '/src/assets/WhatsApp Video 2026-03-24 at 21.59.29.mp4'
+  '/assets/WhatsApp Video 2026-03-24 at 21.54.49.mp4',
+  '/assets/WhatsApp Video 2026-03-24 at 21.59.12.mp4',
+  '/assets/WhatsApp Video 2026-03-24 at 21.59.29.mp4'
 ]
 
 function Carousel({ items, type }) {

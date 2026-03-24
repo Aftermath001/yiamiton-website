@@ -361,6 +361,114 @@
   .video-grid {
     grid-template-columns: 1fr;
   }
+
+  .page {
+    padding: 0.75rem;
+  }
+
+  .page h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .photo-card img {
+    height: 150px;
+  }
+
+  .cartoon-card {
+    height: 300px;
+  }
+
+  .question-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0.5rem;
+  }
+
+  .page h2 {
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    margin-bottom: 0.3rem;
+  }
+
+  .page .subtext {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .page .banter {
+    font-size: 0.9rem;
+  }
+
+  .story-grid {
+    gap: 0.8rem;
+  }
+
+  .story-card {
+    padding: 0.8rem;
+  }
+
+  .story-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .story-card p {
+    font-size: 0.95rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .photo-card img {
+    height: 120px;
+  }
+
+  .cartoon-card {
+    height: 250px;
+  }
+
+  .question-section {
+    padding: 1rem;
+  }
+
+  .question-section h3 {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin: 0.8rem 0;
+  }
+
+  .buttons {
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .yes-btn,
+  .no-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .carousel-indicators {
+    gap: 0.4rem;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0.5rem;
+  }
 }
 
 .cartoon-card {

@@ -87,6 +87,40 @@ main {
   }
 }
 
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    font-size: 1.3rem;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .main-nav li {
+    flex: 1 1 100%;
+    min-width: 80px;
+  }
+
+  .main-nav a {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  main {
+    padding: 1rem 0.5rem 2rem;
+  }
+}
+
 .hero {
   position: relative;
 
