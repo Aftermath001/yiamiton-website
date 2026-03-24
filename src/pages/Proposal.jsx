@@ -55,7 +55,7 @@ function Proposal() {
 
         {showConfetti && (
           <div className="response">
-            <p>You just made me the happiest person alive! ❤️</p>
+            <p>Hey Baby, You just made me the happiest person alive! ❤️</p>
             <p className="banter">
               Redirecting to WhatsApp for our video call...
             </p>
