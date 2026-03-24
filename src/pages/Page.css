@@ -1,0 +1,169 @@
+.page {
+  margin: auto;
+  max-width: 960px;
+  padding: 1rem;
+}
+
+.page h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #8e4448;
+  margin-bottom: 0.5rem;
+}
+
+.page .subtext {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.page .story-grid,
+.page .photo-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-page .intro-card {
+  background: var(--card);
+  border: 1px solid #f1aaaa;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.story-card,
+.photo-card {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid #f1d0cf;
+  padding: 1rem;
+}
+
+.story-card h3 {
+  font-size: 1.2rem;
+  color: #7a3e46;
+  margin-bottom: 0.4rem;
+}
+
+.typing-section {
+  margin-top: 1.5rem;
+  min-height: 5rem;
+}
+
+.typewriter {
+  font-size: 1.1rem;
+  color: #6a4045;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.big-question {
+  margin-top: 0.75rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #9c4a50;
+}
+
+.love-notes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heart-button {
+  background: linear-gradient(150deg, #ffeaed, #ffd3d6);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(159, 85, 90, 0.25);
+  font-size: 1.75rem;
+}
+
+.photo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid #f3b6b3;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.caption,
+.note {
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+.gift-form {
+  background: var(--card);
+  border: 1px solid #f2b2b0;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.gift-form input,
+.gift-form textarea {
+  border: 1px solid #e8b9b7;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.gift-form button {
+  background: #f8b6b6;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  color: #663d42;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gift-form button:hover {
+  transform: translateY(-2px);
+}
+
+.status {
+  margin-top: 0.85rem;
+  color: #7b3b44;
+  font-weight: 600;
+}
+
+@media (max-width: 840px) {
+  .typewriter,
+  .big-question {
+    text-align: center;
+  }
+
+  .main-nav ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
