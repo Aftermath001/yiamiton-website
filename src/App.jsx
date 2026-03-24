@@ -2,7 +2,7 @@ import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Music from './pages/Music'
-import GiftRequest from './pages/GiftRequest'
+import Proposal from './pages/Proposal'
 import './App.css'
 
 function App() {
@@ -10,13 +10,13 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <header className="main-nav">
-          <h1 className="brand">A Love Story</h1>
+          <h1 className="brand"> Our Perfect Love Story</h1>
           <nav>
             <ul>
               <li><NavLink to="/" end>Home</NavLink></li>
               <li><NavLink to="/gallery">Gallery</NavLink></li>
               <li><NavLink to="/music">Music</NavLink></li>
-              <li><NavLink to="/gift">Gift Pic</NavLink></li>
+              <li><NavLink to="/proposal">My Question</NavLink></li>
             </ul>
           </nav>
         </header>
@@ -26,7 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/music" element={<Music />} />
-            <Route path="/gift" element={<GiftRequest />} />
+            <Route path="/proposal" element={<Proposal />} />
           </Routes>
         </main>
       </div>
@@ -35,3 +35,4 @@ function App() {
 }
 
 export default App
+
