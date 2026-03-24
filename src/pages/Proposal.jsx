@@ -9,7 +9,7 @@ function Proposal() {
     setTimeout(() => {
       // Redirect to WhatsApp with message
       window.location.href =
-        "https://wa.me/1234567890?text=Yes!%20Let%27s%20video%20call%20now!%20❤️";
+        "https://wa.me/254798611952?text=Yes!%20Let%27s%20video%20call%20now!%20❤️";
     }, 2000);
   };
 
