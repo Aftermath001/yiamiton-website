@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './Page.css'
 
 const images = [
@@ -31,21 +31,33 @@ const images = [
 const videos = [
   '/assets/WhatsApp Video 2026-03-24 at 21.54.49.mp4',
   '/assets/WhatsApp Video 2026-03-24 at 21.59.12.mp4',
-  '/assets/WhatsApp Video 2026-03-24 at 21.59.29.mp4'
+  '/assets/WhatsApp Video 2026-03-24 at 21.59.29.mp4',
+  '/assets/WhatsApp Video 2026-03-25 at 21.22.20.mp4',
+  '/assets/WhatsApp Video 2026-03-24 at 21.59.29.mp4',
+  '/assets/WhatsApp Video 2026-03-25 at 21.22.45.mp4'
 ]
 
 function Carousel({ items, type }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const videoRef = useRef(null)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % items.length)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [items.length])
+    if (type === 'image') {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % items.length)
+      }, 4000)
+      return () => clearInterval(interval)
+    }
+    // For videos, no fixed autoplay interval so each video can play fully.
+    return undefined
+  }, [items.length, type])
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % items.length)
   const prev = () => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length)
+  const onVideoEnded = () => {
+    // advance only after full video playback
+    next()
+  }
 
   return (
     <div className="carousel">
@@ -54,8 +66,14 @@ function Carousel({ items, type }) {
         {type === 'image' ? (
           <img src={items[currentIndex]} alt={`Gallery ${currentIndex + 1}`} />
         ) : (
-          <video controls>
-            <source src={items[currentIndex]} type="video/mp4" />
+          <video
+            key={items[currentIndex]}
+            ref={videoRef}
+            controls
+            preload="metadata"
+            src={items[currentIndex]}
+            onEnded={onVideoEnded}
+          >
             Your browser does not support the video tag.
           </video>
         )}
@@ -81,12 +99,12 @@ function Gallery() {
       <p className="subtext">A few of my favorite moments with you. Because who needs a photo album when we have these?</p>
 
       <div className="carousel-section">
-        <h3>Photos</h3>
+        <h3>My View of You</h3>
         <Carousel items={images} type="image" />
       </div>
 
       <div className="carousel-section">
-        <h3>Videos</h3>
+        <h3>Our Moving Memories</h3>
         <p className="banter">And the moving ones... Because your laugh in motion? Priceless.</p>
         <Carousel items={videos} type="video" />
       </div>
